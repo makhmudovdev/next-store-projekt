@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- css file -->
+        <link rel="stylesheet" href="./styles/output.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@700&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+        <title>lesson-15 projekt</title>
+    </head>
+    <body class=" bg-[#ECF4FF]">
+      <main>
+
+    <!----------------------------------header start---------------------------------->
+
+    <head>
+      <nav class="bg-white pb-3">
+          <div class="container mx-auto px-4 w-[1262px] flex items-center justify-end gap-[221px] mb-[5px]">
+              <p class="text-[16px] font-[539] flex items-center gap-3">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="email" clip-path="url(#clip0_651_11824)">
+                  <path id="Vector" d="M15 3H3C2.175 3 1.5075 3.675 1.5075 4.5L1.5 13.5C1.5 14.325 2.175 15 3 15H15C15.825 15 16.5 14.325 16.5 13.5V4.5C16.5 3.675 15.825 3 15 3ZM15 6L9 9.75L3 6V4.5L9 8.25L15 4.5V6Z" fill="#1E1E1E"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_651_11824">
+                  <rect width="18" height="18" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                  
+                  Aloqa uchun
+              </p>
+              <select name="select" id="select1">
+                  <option value="English">English</option>
+                  <option value="UZ">UZ</option>
+                  <option value="=RU">RU</option>
+              </select>
+          </div>
+          <div class="container mx-auto px-4 w-[1262px] flex items-centerm justify-between my-3">
+            <svg class="block h-[50px] width="91" height="35" viewBox="0 0 91 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M62.4163 9.85106L58.0996 3.94042L61.2496 0H69.183L62.4163 9.85106Z" fill="#1E1E1E"/>
+              <path d="M69.183 23.2931L62.4163 13.6738L58.0996 19.1209L61.3663 23.2931H69.183Z" fill="#1E1E1E"/>
+              <path d="M84.4659 23.4107V6.02653H90.9992V0H70.6992V6.02653H77.4659V23.4107H84.4659Z" fill="#1E1E1E"/>
+              <path d="M0 23.179V0H6.53334L15.1667 12.0531V0H43.05V6.02653H21.9333V23.179H15.1667L6.3 11.1604V23.179H0Z" fill="#1E1E1E"/>
+              <path d="M42.9333 17.6173V23.1802H24.5V8.3457H36.6333V14.3722H30.8V17.6173H42.9333Z" fill="#1E1E1E"/>
+              <path d="M52.4992 0H45.0326H44.7992L51.0992 8.34442H39.1992V14.371H51.0992L45.0326 23.4107H52.2659L60.6659 11.5895L52.4992 0Z" fill="#1E1E1E"/>
+              <path d="M6.53776 31.1521C6.53776 31.4681 6.45877 31.7378 6.30078 31.9615C6.14523 32.1826 5.92648 32.3516 5.64453 32.4682C5.36259 32.5849 5.03082 32.6432 4.64922 32.6432C4.44748 32.6432 4.25669 32.6335 4.07682 32.6141C3.89696 32.5946 3.73168 32.5667 3.58099 32.5302C3.4303 32.4937 3.29783 32.4488 3.18359 32.3953V31.801C3.36589 31.8764 3.58828 31.9469 3.85078 32.0125C4.11328 32.0757 4.38794 32.1073 4.67474 32.1073C4.9421 32.1073 5.16814 32.072 5.35287 32.0016C5.53759 31.9286 5.67735 31.8253 5.77214 31.6917C5.86936 31.5556 5.91797 31.3927 5.91797 31.2031C5.91797 31.0208 5.87787 30.8689 5.79766 30.7474C5.71745 30.6234 5.58377 30.5116 5.39662 30.412C5.21189 30.3099 4.95912 30.2017 4.63828 30.0875C4.41224 30.0073 4.21294 29.9198 4.04037 29.825C3.8678 29.7278 3.72318 29.6184 3.60651 29.4969C3.48984 29.3753 3.40113 29.2344 3.34036 29.074C3.28203 28.9135 3.25286 28.73 3.25286 28.5234C3.25286 28.2391 3.32457 27.996 3.46797 27.7943C3.6138 27.5901 3.81432 27.4345 4.06953 27.3276C4.32717 27.2182 4.62248 27.1635 4.95547 27.1635C5.23985 27.1635 5.50235 27.1903 5.74297 27.2437C5.98603 27.2972 6.20842 27.3689 6.41016 27.4589L6.21693 27.9911C6.02492 27.9109 5.82075 27.8441 5.60443 27.7906C5.39054 27.7371 5.16936 27.7104 4.94089 27.7104C4.71241 27.7104 4.51919 27.7444 4.3612 27.8125C4.20564 27.8781 4.08655 27.9717 4.00391 28.0932C3.92127 28.2148 3.87995 28.3594 3.87995 28.5271C3.87995 28.7142 3.91884 28.8698 3.99662 28.9937C4.07682 29.1177 4.20321 29.2283 4.37578 29.3255C4.55078 29.4203 4.78169 29.52 5.06849 29.6245C5.38203 29.7387 5.64818 29.8602 5.86693 29.9891C6.08568 30.1154 6.25217 30.271 6.36641 30.4557C6.48064 30.638 6.53776 30.8701 6.53776 31.1521ZM23.6755 32.5703H23.0521V27.787H21.375V27.2401H25.3453V27.787H23.6755V32.5703ZM45.1846 29.8979C45.1846 30.3087 45.1324 30.683 45.0279 31.0208C44.9234 31.3562 44.7678 31.6455 44.5612 31.8885C44.357 32.1292 44.103 32.3151 43.7992 32.4464C43.4954 32.5776 43.143 32.6432 42.7419 32.6432C42.3287 32.6432 41.9678 32.5776 41.6591 32.4464C41.3529 32.3151 41.0977 32.128 40.8935 31.8849C40.6918 31.6418 40.5398 31.3514 40.4378 31.0135C40.3381 30.6757 40.2883 30.3014 40.2883 29.8906C40.2883 29.3462 40.3782 28.8686 40.5581 28.4578C40.7379 28.047 41.0102 27.7274 41.3747 27.499C41.7418 27.2705 42.2011 27.1562 42.7529 27.1562C43.2803 27.1562 43.7239 27.2693 44.0836 27.4953C44.4458 27.7214 44.7192 28.0398 44.9039 28.4505C45.0911 28.8589 45.1846 29.3413 45.1846 29.8979ZM40.9409 29.8979C40.9409 30.35 41.0053 30.7413 41.1341 31.0719C41.2629 31.4024 41.4598 31.6576 41.7247 31.8375C41.9921 32.0174 42.3312 32.1073 42.7419 32.1073C43.1551 32.1073 43.493 32.0174 43.7555 31.8375C44.0204 31.6576 44.2161 31.4024 44.3425 31.0719C44.4688 30.7413 44.532 30.35 44.532 29.8979C44.532 29.2101 44.3874 28.6729 44.0982 28.2865C43.8114 27.8976 43.3629 27.7031 42.7529 27.7031C42.3397 27.7031 41.9994 27.7918 41.732 27.9693C41.4647 28.1467 41.2654 28.3995 41.1341 28.7276C41.0053 29.0533 40.9409 29.4434 40.9409 29.8979ZM62.224 27.2401C62.6615 27.2401 63.0224 27.2948 63.3068 27.4042C63.5936 27.5111 63.8075 27.6752 63.9484 27.8964C64.0894 28.1175 64.1599 28.3995 64.1599 28.7422C64.1599 29.0241 64.1089 29.2599 64.0068 29.4495C63.9047 29.6366 63.771 29.7885 63.6057 29.9052C63.4405 30.0219 63.2642 30.1118 63.0771 30.175L64.5391 32.5703H63.8172L62.51230.3464H61.4037V32.5703H60.7839V27.2401H62.224ZM62.1875 27.776H61.4037V29.8214H62.2495C62.6846 29.8214 63.0042 29.7326 63.2083 29.5552C63.4149 29.3778 63.5182 29.1165 63.5182 28.7714C63.5182 28.4092 63.4089 28.1528 63.1901 28.0021C62.9738 27.8514 62.6396 27.776 62.1875 27.776ZM82.7706 32.5703H79.8029V27.2401H82.7706V27.787H80.4227V29.5115H82.6357V30.051H80.4227V32.0234H82.7706V32.5703Z" fill="#FF0101"/>
+</svg> 
+              <button
+                  class="bg-gradient-to-r from-purple-500 to-pink-500 py-[11px] px-[19px] text-white text-[16px] font-semibold flex items-center justify-center gap-4 rounded-md">
+                  <img src="./images/menu.svg" alt="">
+                  Katalog
+              </button>
+              <div
+                  class="w-[410px] h-[50px] rounded-md relative border-solid border-2 border-sky-500 p-[1px] ">
+                  <input type="text" placeholder="Maxsulotlarni izlash" class="w-[352px] h-[46px] px-3 border-none ">
+                  <button
+                      class="bg-[#0D63F3] w-[64px] h-[50px] absolute right-[-1px] top-[-1px] rounded-r-md flex items-center justify-center">
+                      <img src="./images/search (1).svg" alt="search">
+                  </button>
+              </div>
+              <div class="flex items-center gap-12">
+                  <p class="flex items-center gap-6">
+                      <a href="#" class="flex items-center justify-center p-[11px] rounded-md bg-[#ECF4FF]">
+                          <img src="./images/favorite_border.svg" alt="favorite">
+                      </a>
+                      <a href="#" class="flex items-center justify-center p-[11px] rounded-md bg-[#ECF4FF]">
+                          <img src="./images/shopping_cart (1).svg" alt="shopping">
+                      </a>
+                  </p>
+                  <button class="py-[13px] flex items-center justify-center bg-gradient-to-r from-pink-200 to-purple-200 w-[105px] rounded-md">
+                      <a href="#">Kirish</a>
+                  </button>
+              </div>
+          </div>
+      </nav>
+  </head>
+  <!----------------------------------header end---------------------------------->
+
+
+
+  
+    <!----------------------------------main start---------------------------------->
+  <main>
+    
+    <!----------------------------------section-1 start---------------------------------->
+      <section id="section_1">
+          <div class="container mx-auto px-4 w-[1262px]">
+              <div class="relative my-10">
+                  <img src="./images/image 9.png" alt="img" class="rounded-lg">
+                  <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-purple-500 to-pink-500 rounded-[50%] absolute right-[-62px] top-[178px]">
+                      <img src="./images/keyboard_arrow_right.svg" alt="keyboard_arrow_right">
+                  </button>
+                  <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-pink-200 to-purple-200 rounded-[50%] absolute left-[-62px] top-[178px]">
+                    <img src="./images/keyboard_arrow_left.svg" alt="keyboard_arrow_left">
+                </button>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r  from-purple-500 to-pink-500"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------------section-1 end ---------------------------------->
+
+
+    <!----------------------------------section-2 start---------------------------------->
+    <section id="section_2">
+        <div class="container mx-auto px-4 w-[1262px] my-5">
+            <h3 class="text-[28px] font-[591] text-[#1E1E1E]">
+                Kategoriyalar
+            </h3>
+            <div class="flex items-center justify-between my-[29px]">
+                <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                    <img src="./images/image 6.png" alt="img">
+                    <p class="text-center mt-1">
+                        Smartfonlar
+                    </p>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                        <img src="./images/image 6 (1).png" alt="img">
+                        <p class="text-center mt-1 text-[14px] leading-4">
+                            Kompyuterlar va
+                            notebooklar
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                        <img src="./images/image 6 (2).png" alt="img">
+                        <p class="text-center mt-1">
+                            Televizorlar
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                        <img src="./images/image 6 (3).png" alt="img">
+                        <p class="text-center mt-1">
+                            Aqlli soatlar
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                        <img src="./images/image 6 (4).png" alt="img">
+                        <p class="text-center mt-1">
+                            Quloqchinlar
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                        <img src="./images/image 6 (5).png" alt="img">
+                        <p class="text-center mt-1">
+                            Konditsioner
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                      <img src="./images/image 6 (6).png" alt="">
+                      <p class="text-center mt-1">
+                        Sovutkichlar
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="w-[136px] h-[200px] py-[9px] bg-white rounded-lg">
+                    <img src="./images/image 6 (7).png" alt="img">
+                    <p class="text-center mt-1 leading-4">
+                        Kir yuvish 
+                        mashinalari
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="mb-5 w-[100%] bg-white py-[17px] rounded-[10px]">
+            <a href="#" class="text-center text-[18px] font-[591]">Batafsil</a>
+        </button>
+    </div>
+</section>
+
+
+    <!----------------------------------section-2 end---------------------------------->
+
+
+
+    <!----------------------------------section-3 start---------------------------------->
+      <section id="section_3">
+        <div class="container mx-auto px-4 w-[1262px]">
+        <h1 class="font-[Poppins] text-[28px] font-[591] text-[#1E1E1E]">Eng ko’p sotilgan</h1>
+        <div class="flex gap-[20px]">
+
+
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+            <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+              <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+              <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">299 000 so’m</h1>
+              <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Airpods Pro <br> 
+                simsiz quloqchin , Oq rangda</p>
+                <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">1230 ta buyurtma</p>
+                <div class="flex gap-[28px]">
+                <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+                <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+              </div>
+          </div>
+
+
+          
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+            <button class="absolute bg-[#FF0101] text-[white] rounded-[5px] w-[81px] h-[31px] font-[Roboto] ms-[10px] mt-[8px]">Top sale</button>
+            <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+              <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+              <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">16 114 285 so'm</h1>
+              <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Macbook Pro <br>
+                13" 2.4 2019 Intel core i5 <br>
+                DDR3 8 GB SSD 256 GB  </p>
+                <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[5px] ms-[20px]">230 ta buyurtma</p>
+                <div class="flex gap-[28px]">
+                <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+                <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+              </div>
+          </div>
+
+
+
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+            <button class="absolute bg-[#EB8528] text-[white] rounded-[5px] w-[81px] h-[31px] font-[Roboto] ms-[10px] mt-[8px]">Yangilik</button>
+            <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+              <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+              <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">4 234 000 so’m</h1>
+              <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple watch 4 </p>
+                <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[45px] ms-[20px]">543 ta buyurtma</p>
+                <div class="flex gap-[28px]">
+                <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[20px]">Sotib olish</button>
+                <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+              </div>
+          </div>
+
+
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+            <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+              <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+              <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 340 000 so’m</h1>
+              <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Robot - tozalagich Xiaomi <br> 
+                Mi Robot</p>
+                <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">876 ta buyurtma</p>
+                <div class="flex gap-[28px]">
+                <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+                <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+              </div>
+          </div>
+
+
+
+            <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+              <button class="absolute bg-[#EB8528] text-[white] rounded-[5px] w-[81px] h-[31px] font-[Roboto] ms-[10px] mt-[8px]">Yangilik</button>
+            <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+              <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+              <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+              <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+                Canon EOS 6D Body</p>
+                <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+                <div class="flex gap-[28px]">
+                <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+                <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+              </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="flex gap-[20px]">
+
+
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+            <button class="absolute bg-[#EB8528] text-[white] rounded-[5px] w-[81px] h-[31px] font-[Roboto] ms-[10px] mt-[8px]">Yangilik</button>
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+              Canon EOS 6D Body</p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+        
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">16 114 285 so'm</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Macbook Pro <br>
+              13" 2.4 2019 Intel core i5 <br>
+              DDR3 8 GB SSD 256 GB  </p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[5px] ms-[20px]">230 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+        
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">4 234 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple watch 4 </p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[45px] ms-[20px]">543 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[20px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <button class="absolute bg-[#FF0101] text-[white] rounded-[5px] w-[81px] h-[31px] font-[Roboto] ms-[10px] mt-[8px]">Top sale</button>
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 340 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Robot - tozalagich Xiaomi <br> 
+              Mi Robot</p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">876 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+        <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+          <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+          <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+          <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+            Canon EOS 6D Body</p>
+            <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+            <div class="flex gap-[28px]">
+            <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+            <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+          </div>
+      </div>
+    </div>
+
+
+    <button class="mb-5 w-[100%] bg-white py-[17px] rounded-[10px] mt-[37px]">
+      <a href="#" class="text-center text-[18px] font-[591]">Ko’proq ko’rish</a>
+  </button>
+
+        </div>
+      </div>
+      </section>
+
+      
+    <!----------------------------------section-3 end---------------------------------->
+
+  
+
+
+
+
+    <!----------------------------------section-4 start---------------------------------->
+      <section id="section_4">
+        <div class="container mx-auto px-4 w-[1262px]">
+            <div class="relative my-10">
+                <img src="./images/image 1.png" alt="img" class="rounded-lg">
+                <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-purple-500 to-pink-500 rounded-[50%] absolute right-[-62px] top-[108px]">
+                    <img src="./images/keyboard_arrow_right.svg" alt="keyboard_arrow_right">
+                </button>
+                <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-pink-200 to-purple-200 rounded-[50%] absolute left-[-62px] top-[108px]">
+                    <img src="./images/keyboard_arrow_left.svg" alt="keyboard_arrow_left">
+                </button>
+                <div class="flex items-center justify-center gap-4 mt-5">
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r  from-purple-500 to-pink-500"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                    <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!----------------------------------section-4 end---------------------------------->
+
+
+
+    
+    <!----------------------------------section-5 start---------------------------------->
+    <section id="section_5">
+      <div class="container mx-auto px-4 w-[1262px]">
+      <h1 class="font-[Poppins] text-[28px] font-[591] text-[#1E1E1E] mt-[60px]">Eng ommabop</h1>
+      <div class="flex gap-[20px]">
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">299 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Airpods Pro <br> 
+              simsiz quloqchin , Oq rangda</p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">1230 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+        
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">16 114 285 so'm</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Macbook Pro <br>
+              13" 2.4 2019 Intel core i5 <br>
+              DDR3 8 GB SSD 256 GB  </p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[5px] ms-[20px]">230 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">4 234 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple watch 4 </p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[45px] ms-[20px]">543 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[20px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 340 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Robot - tozalagich Xiaomi <br> 
+              Mi Robot</p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">876 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+
+
+
+          <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+          <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+            <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+            <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+            <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+              Canon EOS 6D Body</p>
+              <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+              <div class="flex gap-[28px]">
+              <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+              <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+            </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="flex gap-[20px]">
+
+
+
+        <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+        <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+          <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+          <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+          <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+            Canon EOS 6D Body</p>
+            <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+            <div class="flex gap-[28px]">
+            <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+            <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+          </div>
+      </div>
+
+
+
+      
+      <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+        <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+          <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+          <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">16 114 285 so'm</h1>
+          <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple Macbook Pro <br>
+            13" 2.4 2019 Intel core i5 <br>
+            DDR3 8 GB SSD 256 GB  </p>
+            <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[5px] ms-[20px]">230 ta buyurtma</p>
+            <div class="flex gap-[28px]">
+            <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+            <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+          </div>
+      </div>
+
+
+
+      
+      <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+        <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+          <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+          <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">4 234 000 so’m</h1>
+          <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Apple watch 4 </p>
+            <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[45px] ms-[20px]">543 ta buyurtma</p>
+            <div class="flex gap-[28px]">
+            <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[20px]">Sotib olish</button>
+            <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+          </div>
+      </div>
+
+
+
+
+
+      <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+        <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+          <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+          <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 340 000 so’m</h1>
+          <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Robot - tozalagich Xiaomi <br> 
+            Mi Robot</p>
+            <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">876 ta buyurtma</p>
+            <div class="flex gap-[28px]">
+            <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+            <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+          </div>
+      </div>
+
+
+
+
+
+      <div class="w-[230px] h-[377px] bg-[white] rounded-[10px] mt-[20px]">
+      <img class="ms-[190px] mt-[15px] absolute" src="./images/favorite_borderlike.svg" alt="">
+        <img class="ms-[25px] mt-[10px]" src="./images/image 15 (2).jpg" alt="">
+
+        <h1 class="text-[#0D63F3] font-[Poppins] text-[18px] font-[591] ms-[20px]">1 345 000 so’m</h1>
+        <p class="text-[#1E1E1E] text-[14px] font-[539] ms-[20px]">Oynali Fotoaparat <br> 
+          Canon EOS 6D Body</p>
+          <p class="text-[#6C757D] text-[14px] font-[Poppins] font-[539] mt-[25px] ms-[20px]">565 ta buyurtma</p>
+          <div class="flex gap-[28px]">
+          <button class="bg-[#0D63F3] text-[white] w-[130px] h-[40px] font-[Poppins] font-[539] text-[16px] rounded-[8px] ms-[20px] mt-[18px]">Sotib olish</button>
+          <img class="mt-[20px]" src="./images/shopping_cart.svg" alt="korzinka">
+        </div>
+    </div>
+  </div>
+
+
+  <button class="mb-5 w-[100%] bg-white py-[17px] rounded-[10px] mt-[37px]">
+    <a href="#" class="text-center text-[18px] font-[591]">Ko’proq ko’rish</a>
+</button>
+
+      </div>
+    </div>
+    </section>
+
+    
+    <!----------------------------------section-5 end---------------------------------->
+
+
+
+    
+    <!----------------------------------section-6 start---------------------------------->
+    <section id="section_6">
+      <div class="container mx-auto px-4 w-[1262px]">
+      <h1 class="font-[Poppins] text-[28px] font-[591] text-[#1E1E1E] mt-[60px]">Brendlar bo’yicha</h1>
+      <div class="flex gap-[20px] mt-[20px]">
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/imagehp.svg" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (1).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (3).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (4).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (5).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (6).png" alt="hp">
+        </div>
+      </div>
+
+
+      <div class="flex mt-[20px] gap-[20px]">
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (7).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (8).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+      </div>
+
+
+      <div class="flex mt-[20px] gap-[20px]">
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+        <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+          <img src="./images/image (9).png" alt="hp">
+        </div>
+
+      </div>
+</div>
+</section>
+
+    <!----------------------------------section-6 start---------------------------------->
+
+
+    <!----------------------------------section-7 start---------------------------------->
+    <section id="section_7">
+      <div class="container mx-auto px-4 w-[1262px]">
+          <div class="relative my-10 mt-[60px]">
+              <img src="./images/image 1.png" alt="img" class="rounded-lg">
+              <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-purple-500 to-pink-500 rounded-[50%] absolute right-[-62px] top-[108px]">
+                  <img src="./images/keyboard_arrow_right.svg" alt="keyboard_arrow_right">
+              </button>
+              <button class="w-[42px] h-[42px] p-[9px] bg-gradient-to-r from-pink-200 to-purple-200 rounded-[50%] absolute left-[-62px] top-[108px]">
+                  <img src="./images/keyboard_arrow_left.svg" alt="keyboard_arrow_left">
+              </button>
+              <div class="flex items-center justify-center gap-4 mt-5">
+                  <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r  from-purple-500 to-pink-500"></span>
+                  <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+                  <span class="block w-4 h-4 rounded-[50%] bg-gradient-to-r from-pink-200 to-purple-200"></span>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <!----------------------------------section-7 end---------------------------------->
+
+  
+  <!----------------------------------section-8 start---------------------------------->
+
+  <section id="section_8">
+    <div class="container mx-auto px-4 w-[1262px]">
+    <h1 class="font-[Poppins] text-[28px] font-[591] text-[#1E1E1E] mt-[60px]">Do’konlarimiz</h1>
+    <div class="flex gap-[20px] mt-[20px]">
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (10).png" alt="hp">
+      </div>
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (11).png" alt="hp">
+      </div>
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (12).png" alt="hp">
+      </div>
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (13).png" alt="hp">
+      </div>
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (14).png" alt="hp">
+      </div>
+
+      <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+        <img src="./images/image (9).png" alt="hp">
+      </div>
+</div>
+
+
+
+<div class="flex gap-[20px] mt-[20px]">
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+
+  <div class="w-[188px] h-[100px] rounded-[8px] bg-[#FCFFFC] px-[49px] py-[5px]">
+    <img src="./images/image (9).png" alt="hp">
+  </div>
+  </div>
+</div>
+      </section>
+      
+  <!----------------------------------section-8 end---------------------------------->
+
+
+
+  
+  <!----------------------------------footer start---------------------------------->
+  <footer>
+    <div class="bg-[#4D5EF633] h-[450px] mt-[80px]">
+      <div class="ontainer mx-auto px-4 w-[1262px]">
+
+        <div class="flex">
+          <div class="leading-10 mt-[60px]">
+            <h1 class="text-[16px] font-[653] font-[Poppins] text-[#1E1E1E]">Hujjatlar</h1>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Umumiy shartlar</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Ofertalar arxivi</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Nizom</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Guvohnoma</p>
+          </div>
+
+
+          <div class="leading-10 mt-[60px] ms-[82px]">
+            <h1 class="text-[16px] font-[653] font-[Poppins] text-[#1E1E1E]">Servis</h1>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Do’konlar</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Biz haqimizda</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Hamkorlik uchun</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Qaytarish</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Promokodlar</p>
+          </div>
+
+
+          <div class="leading-10 mt-[60px] ms-[82px]">
+            <h1 class="text-[16px] font-[653] font-[Poppins] text-[#1E1E1E]">Mahsulotlar katalogi</h1>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 1</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 1</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 2</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 2</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 3</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Katalog 3</p>
+          </div>
+
+
+          <div class="leading-10 mt-[60px] ms-[250px]">
+            <h1 class="text-[16px] font-[653] font-[Poppins] text-[#1E1E1E]">Axbarot xizmati</h1>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">contact.@nextstore.uz</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">+998 97 712 96 96</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E] mt-[-20px]">+998 95 503 09 09</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E]">Sag’bon 186, Olmazor tumani, Toshkent,</p>
+            <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E] mt-[-20px]">O'zbekiston</p>
+
+
+            <div class="flex gap-[26px] mt-[27px]">
+              <li class="list-none">
+                <img src="./images/Facebook - Original.svg" alt="">
+              </li>
+
+              <li class="list-none">
+                <img src="./images/Group (3).svg" alt="">
+              </li>
+
+              <li class="list-none">
+                <img src="./images/Artboard.svg" alt="">
+              </li>
+
+              <li class="list-none">
+                <img src="./images/TikTok - Original.svg" alt="">
+              </li>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="border-b-2 border-indigo-500 mt-[41px]"></div>
+
+
+        <div class="flex">
+          <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E] mt-[38px]">2022  Nextstore.com</p>
+          
+          <p class="text-[16px] font-[539] font-[Poppins] text-[#1E1E1E] mt-[38px] ms-[775px]">Powered by </p>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <!----------------------------------footer end---------------------------------->
+    </main>
+    </body>
+</html>
