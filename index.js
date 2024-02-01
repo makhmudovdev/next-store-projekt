@@ -1,3 +1,6 @@
+
+/* ----------------------------------- CARUSELS START ------------------------------------ */
+
 let caruselImge = document.querySelector('.carusels__imge')
 let btn1 = document.querySelector('.btn1');
 let btn2 = document.querySelector('.btn2');
@@ -123,9 +126,14 @@ window.addEventListener('load',()=>{
 });
 
 
+/* ----------------------------------- CARUSELS END ------------------------------------ */
 
 
 
+
+
+
+/* ----------------------------------- LOGIN START ------------------------------------ */
 
 let modalWrapper = document.querySelector(".modal_wrapper"),
 open=document.querySelector("#login"),
@@ -159,9 +167,11 @@ modalWrapper.addEventListener('click', (e)=>{
 });
 
 
+/* ----------------------------------- LOGIN END ------------------------------------ */
 
 
-///---------------------------------MODAL CONTENT 
+
+/* ----------------------------------- DROPDOWN START ------------------------------------ */
 
 let modalWrappers = document.querySelector(".modal_wrappers"),
 kirish=document.querySelector("#kirish"),
@@ -171,14 +181,37 @@ chiqish=document.querySelector("#chiqish");
 kirish.addEventListener("click",()=>{
     modalWrappers.style.display = "block";
     document.body.style.overflow = "hidden";
-})
+});
 
 
 chiqish.addEventListener("click",()=>{
     modalWrappers.style.display = "none";
     document.body.style.overflow = "visible";
-})
+});
 
+
+/* ----------------------------------- DROPDOWN END ------------------------------------ */
+
+
+
+/* ----------------------------------- KATALOG START ------------------------------------ */
+
+let katalogaWrap = document.querySelector(".katalog_wrapper"),
+katalog=document.querySelector("#katlog"),
+clos=document.querySelector("#clos");
+
+
+katalog.addEventListener("click",()=>{
+    katalogaWrap.style.display = "flex";
+});
+
+
+clos.addEventListener("click",()=>{
+    katalogaWrap.style.display = "none";
+});
+
+
+/* ----------------------------------- KATALOG END ------------------------------------ */
 
 
 

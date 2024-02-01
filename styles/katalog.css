@@ -1,3 +1,6 @@
+
+/* -------------- DROPDOWN START ------------ */
+
 .modal_wrappers {
     display: none;
     z-index: 23;
@@ -12,6 +15,15 @@
     transition: all .3s linear;
 }
 
+
+/* -------------- DROPDOWN END ------------ */
+
+
+
+
+
+/* -------------- KATALOG START ------------ */
+
 .katalog_wrapper{
     position: absolute !important;
     top: 110px !important;
@@ -23,3 +35,6 @@
     display: none;
     align-items: start;
 }
+
+
+/* -------------- KATALOG END ------------ */
