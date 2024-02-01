@@ -8,15 +8,107 @@
         <link rel="stylesheet" href="./styles/output.css" />
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Inter:wght@700&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./loader.css">
+        <link rel="stylesheet" href="./login.css">
         <link rel="stylesheet" href="./main.css">
+        <link rel="stylesheet" href="./katalog.css">
         <title>lesson-15 projekt</title>
     </head>
     <body class=" bg-[#ECF4FF]">
-      <main>
 
+
+      <div class="load_wrapper">
+        <span class="loader"></span> 
+    </div>
+
+
+
+
+
+    
+            <!-- MODAL CONTENT -->
+
+
+            <div class="modal_wrapper">
+              <div class="modal_content">
+                  <div class="modal_header">
+                       <span></span>  <span id="close"> <svg class="text-4xl mt-[20px] mr-[20px] " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
+                  </div>
+        
+                  <div class="modal_body py-6">
+        
+                    <h3 class="text-center modal_title text-black-600 text-[28px] font-[Poppins] font-[591]"> Telefon raqam orqali kirish </h3>
+                    <form action="#" class="mx-auto w-[60%] py-5">
+                      <label for="username" class=" block mb-4">
+                          <input class="py-3 w-[346px] h-[40px]  border border-[#E4E7EE] px-4 rounded-[8px] ms-[-35px]" type="text " id="username" placeholder="Telefon raqam ">
+                      </label>
+                      <label for="password" class="block">
+                          <input class="py-3 w-[346px] h-[40px]  border border-[#E4E7EE] px-4 rounded-[8px] ms-[-35px]" type="password" id="password" placeholder="Parol">
+                      </label>
+                      
+                    </form>
+                    <button class="bg-[#0D63F3] rounded-[8px] h-[40px] modal_submit px-3 py-2 text-white block mx-auto my-4 w-[346px]">
+                      Kirish
+                  </button>
+                  <a href="#" class="text-center text-black-600 text-[#0D63F3] font-[Poppins] text-[14px] font-[539] mt-[20px]">Parolni unutdingizmi ?</a>
+                  </div>
+        
+                  <div class="modal_footer">
+        
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+              <!--------------------- MODAL CONTENT START -------------------->
+    <div class="container mx-auto px-4 w-[1262px] relative">
+      <div class="modal_wrappers ">
+          <p class="flex items-center justify-between">
+              <span class="inline-block text-[16px] leading-5 font-medium">Alixonov Asrorjon</span>
+              <span id="chiqish" class="inline-block text-red-500 cursor-pointer">Chiqish</span>
+          </p>
+          <ul>
+              <li class="flex items-center gap-3 mt-2">
+                  <img src="./images/Vectoruser.svg" alt="Vector" class="block w-4 h-4">
+                  <a href="#" class="block text-[16px] leading-5 font-[439] hover:text-red-500">Shaxsiy ma'lumotlar</a>
+              </li>
+              <li class="flex items-center gap-3 mt-2">
+                  <img src="./images/Groupbuyurtma.svg" alt="Vector" class="block w-4 h-4">
+                  <a href="#" class="block text-[16px] leading-5 font-[439] hover:text-red-500">Mening buyurtmalarim</a>
+              </li>
+              <li class="flex items-center gap-3 mt-2">
+                  <img src="./images/Vectorlike.svg" alt="Vector" class="block w-4 h-4">
+                  <a href="#" class="block text-[16px] leading-5 font-[439] hover:text-red-500">Sevimlilar</a>
+              </li>
+              <li class="flex items-center gap-3 mt-2">
+                  <img src="./images/placemanzil.svg" alt="Vector" class="block w-4 h-4">
+                  <a href="#" class="block text-[16px] leading-5 font-[439] hover:text-red-500">Manzillar</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <!--------------------- MODAL CONTENT END --------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <main>
     <!----------------------------------header start---------------------------------->
 
-    <head>
+    <header>
       <nav class="bg-white pb-3">
           <div class="container mx-auto px-4 w-[1262px] flex items-center justify-end gap-[221px] mb-[5px]">
               <p class="text-[16px] font-[539] flex items-center gap-3">
@@ -68,10 +160,10 @@
                           <img src="./images/favorite_border.svg" alt="favorite">
                       </a>
                       <a href="#" class="flex items-center justify-center p-[11px] rounded-md bg-[#ECF4FF]">
-                          <img src="./images/shopping_cart (1).svg" alt="shopping">
+                          <img id="login" src="./images/shopping_cart (1).svg" alt="shopping">
                       </a>
                   </p>
-                  <button class="py-[13px] flex items-center justify-center bg-gradient-to-r from-pink-200 to-purple-200 w-[105px] rounded-md">
+                  <button id="kirish" class="py-[13px] flex items-center justify-center bg-gradient-to-r from-pink-200 to-purple-200 w-[105px] rounded-md">
                       <a href="#">Kirish</a>
                   </button>
               </div>
